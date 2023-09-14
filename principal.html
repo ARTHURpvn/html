@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Digital Notte</title>
+		<meta name="description" content="Digital Notte">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="Júlio César">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../css/principal.css">
+	</head>
+	<body>
+		<!-- Topo do iframe -->
+	  	<iframe id="top-iframe" src="topIframe.html" name="cabeçalho"></iframe>
+	
+		<!-- Container dos botões -->
+				<div class="button-container">
+					<p id="dn">matéria</p>
+					<ul>
+						<li><button onclick="showContent('conteudo1')">Matemática</button></li>
+						<li><button onclick="showContent('conteudo2')">Português</button></li>
+						<li><button onclick="showContent('conteudo3')">História</button></li>
+						<li><button onclick="showContent('conteudo4')">Geografia</button></li>
+						<li><button onclick="showContent('conteudo5')">Biologia</button></li>
+						<li><button onclick="showContent('conteudo6')">Química</button></li>
+						<li><button onclick="showContent('conteudo7')">Física</button></li>
+						<li><button onclick="showContent('conteudo8')">Inglês</button></li>
+					</ul>
+					<p id="dn">Curso</p>
+					<ul>  
+						<li><button onclick="showContent('conteudo9')">GCW.II</button></li>
+						<li><button onclick="showContent('conteudo10')">IW.II</button></li>
+						<li><button onclick="showContent('conteudo11')">UDI.I</button></li>
+						<li><button onclick="showContent('conteudo12')">DDM.I</button></li> 
+						<li><button onclick="showContent('conteudo13')">SW.I</button></li>
+					</ul>
+				</div>
+				<!-- Container de conteúdo -->
+		<div class="content-container">
+			<!-- Conteúdo de Matemática -->
+			<aside id="content-conteudo1">
+				<h1>Matemática</h1>
+				<p>Aqui ficará a matéria de Matemática &#128512;</p>
+			</aside>
+		
+			<!-- Conteúdo de Português -->
+			<aside id="content-conteudo2">
+				<h1>Português</h1>
+				<p>Aqui ficará a matéria de Português &#128523;</p>
+			</aside>
+		
+			<!-- Conteúdo de História -->
+			<aside id="content-conteudo3">
+				<h1>História</h1>
+				<p>Aqui ficará a matéria de História &#128525;</p>
+			</aside>
+		
+			<!-- Conteúdo de Geografia -->
+			<aside id="content-conteudo4">
+				<h1>Geografia</h1>
+				<p>Aqui ficará a matéria de Geografia &#127800;</p>
+			</aside>
+		
+			<!-- Conteúdo de Biologia -->
+			<aside id="content-conteudo5">
+				<h1>Biologia</h1>
+				<p>Aqui ficará a matéria de Geografia &#128540</p>
+			</aside>
+		
+			<!-- Conteúdo de Química -->
+			<aside id="content-conteudo6">
+				<h1>Química</h1>
+				<p>Aqui ficará a matéria de Química &#128526;</p>
+			</aside>
+		
+			<!-- Conteúdo de Física -->
+			<aside id="content-conteudo7">
+				<h1>Física</h1>
+				<p>Aqui ficará a matéria de Física &#129297;</p>
+			</aside>
+		
+			<!-- Conteúdo de Inglês -->
+			<aside id="content-conteudo8">
+				<h1>Inglês</h1>
+				<p>Aqui ficará a matéria de Inglês &#129324;</p>
+			</aside>
+		
+			<!-- Conteúdo de Gestão de conteúdo Web II-->
+			<aside id="content-conteudo9">
+				<h1>Gestão de conteúdo Web II</h1>
+				<p>Aqui ficará a matéria Gestão de conteúdo Web II &#128565;</p>
+			</aside>
+
+			<!-- Conteúdo de Interface Web II -->
+			<aside id="content-conteudo10">
+				<h1>Interface Web II</h1>
+				<p>Aqui ficará a matéria de Interface Web II &#128579;</p>
+			</aside>
+		
+			<!-- Conteúdo de Usabilidade e Design de Interação I -->
+			<aside id="content-conteudo11">
+				<h1>Conteúdo de Usabilidade e Design de Interação I </h1>
+				<p>Aqui ficará a matéria de Conteúdo de Usabilidade e Design de Interação I &#129316;</p>
+			</aside>
+
+			<!-- Conteúdo de Desenvolvimento para dispositivos Móveis I -->
+			<aside id="content-conteudo12">
+				<h1>Desenvolvimento para dispositivos Móveis I</h1>
+				<p>Aqui ficará a matéria de Desenvolvimento para dispositivos Móveis I &#29321;</p>
+			</aside>
+		
+			<!-- Conteúdo de Sistemas Web I -->
+			<aside id="content-conteudo13">
+				<h1>Sistemas Web I </h1>
+				<p>Aqui ficará a matéria de Sistemas Web I  &#128519;</p>
+			</aside>
+		</div>
+	
+		<!-- Rodapé do iframe -->
+		<iframe id="footer-iframe" src="footerIframe.html" name="Rodapé"></iframe>
+	
+		<!-- Script para exibir o conteúdo selecionado -->
+		<script>
+	
+			function showContent(contentId) {
+			// Esconder todos os conteúdos
+			var contents = document.getElementsByClassName("content-container")[0].children;
+			for (var i = 0; i < contents.length; i++) {
+				contents[i].style.display = "none";
+			}
+		
+			// Exibir o conteúdo selecionado
+			var selectedContent = document.getElementById("content-" + contentId);
+			selectedContent.style.display = "block";
+			}
+		</script>
+	</body>
+</html>
+	
